@@ -1,50 +1,35 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../assets/fonts/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+body {
+  font-family: "Avenir", sans-serif;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.subtitle {
+  font-weight: 500;
+}
+
 body {
   background-color: #ffeeaa;
-}
-
-.pokemon__header {
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  font-size: 3rem;
-  color: #1d2597;
-}
-.pokemon__points {
-  display: flex;
-  justify-content: center;
-}
-
-.name {
-  display: flex;
-  justify-content: center;
-}
-
-.image {
-  padding-left: 52rem;
-}
-
-#head__label {
-  padding-left: 52rem;
-}
-
-#body__label {
-  padding-left: 52rem;
-}
-
-#head {
-  margin-right: 52rem;
-}
-
-#body {
-  margin-right: 52rem;
-}
-
-.form__submit-button {
-  margin-left: 58rem;
-}
-
-.next {
-  margin-left: 58rem;
 }
 
 .head {
@@ -58,4 +43,70 @@ body {
 .show {
   display: block;
   color: green;
+}
+
+.pokemon__header {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: #1d2597;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.pokemon__points {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding-left: 10rem;
+}
+img.image {
+  padding-left: 10rem;
+}
+
+button.next {
+  margin-left: 10rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .pokemon__header {
+    font-size: 3rem;
+  }
+  .image {
+    padding-left: 52rem;
+  }
+  #head__label {
+    padding-left: 52rem;
+  }
+  #body__label {
+    padding-left: 52rem;
+  }
+  #head {
+    margin-right: 50rem;
+    padding-top: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  #body {
+    margin-right: 50rem;
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+  }
+  .form__submit-button {
+    margin-left: 56.3rem;
+    margin-top: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+  }
+  .next {
+    margin-left: 56.3rem;
+    margin-top: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+  }
 }/*# sourceMappingURL=home.css.map */
