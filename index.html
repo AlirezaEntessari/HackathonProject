@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="../styles/easy.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./scripts/app.js" async></script>
-    <title>Hackathon</title>
+    <script src="../scripts/easy.js" async></script>
+    <title>Whos That Pokemon - EASY</title>
 </head>
 <body>
-    <a href="./pages/pokemon.html">Who's That Pokemon</a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">EASY MODE</a></li>
+                <li><a href="./pages/pokemon.html">HARD MODE</a></li>
+                <li><a href="./pages/fusion.html">FUSION MODE</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1 class="points">POINTS: 0</h1>
-    <h1 class="name"></h1>
+    <h3 class="id"></h3>
     <img class="image" src="" alt="">
-    <form class="form">
-        <div>
-            <label for="head">HEAD</label>
-            <input type="text" id="head" name="head">
-        </div>
-        <div>
-            <label for="body">BODY</label>
-            <input type="text" id="body" name="body">
-        </div>
-        <button class="form__submit-button" type="submit">SUBMIT</button>
+    <h2 class="types"></h2>
+    <form class="form" id="form">
+        <button class="form__option" type="submit" id="option1">a</button>
+        <button class="form__option" type="submit" id="option2">b</button>
+        <button class="form__option" type="submit" id="option3">c</button>
+        <button class="form__option" type="submit" id="option4">d</button>
     </form>
-    <h2 class="head"></h2>
-    <h2 class="body"></h2>
     <button class="next">SKIP</button>
-    
 </body>
 </html>

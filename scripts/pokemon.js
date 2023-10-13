@@ -16,7 +16,6 @@ async function getRandomPokemon() {
     }
 }
 
-const name = document.querySelector('.name');
 const id = document.querySelector('.id');
 const img = document.querySelector('.image');
 const form = document.getElementById('form');
@@ -39,8 +38,6 @@ form.addEventListener('submit', (event) => {
 })
 
 function displayPokemonData(data) {
-    
-    name.textContent = `Name: ${data.name}`;
 
     id.textContent = `ID: ${data.id}`;
 

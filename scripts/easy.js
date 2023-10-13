@@ -25,8 +25,6 @@ async function getRandomNames() {
     return [response1.data.name, response2.data.name, response3.data.name];
 }
 
-
-const name = document.querySelector('.name');
 const id = document.querySelector('.id');
 const img = document.querySelector('.image');
 const form = document.getElementById('form');
@@ -66,12 +64,17 @@ form.addEventListener('submit', (event) => {
         img.classList.add('image--show');
         img.classList.remove('image');
         next.textContent = "NEXT";
+        option1.disabled = true;
+        option2.disabled = true;
+        option3.disabled = true;
+        option4.disabled = true;
+    }
+    else {
+        selected.classList.add('incorrect');
     }
 })
 
 function displayPokemonData(data) {
-    
-    name.textContent = `Name: ${data.name}`;
 
     id.textContent = `ID: ${data.id}`;
 
@@ -90,6 +93,14 @@ next.addEventListener('click', () => {
     getRandomPokemon()
     img.classList.add('image');
     img.classList.remove('image--show');
+    option1.classList.remove('correct', 'incorrect');
+    option2.classList.remove('correct', 'incorrect');
+    option3.classList.remove('correct', 'incorrect');
+    option4.classList.remove('correct', 'incorrect');
+    option1.disabled = false;
+    option2.disabled = false;
+    option3.disabled = false;
+    option4.disabled = false;
 })
 
 getRandomPokemon();
