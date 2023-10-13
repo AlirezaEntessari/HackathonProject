@@ -1,10 +1,18 @@
 let correct;
+let currentFusion;
 async function fetch() {
-    const response = await axios.get("https://keith.api.stdlib.com/pokefusion@0.2.0/");
-    correct = false;
-    display(response);
-    return response;
+    try {
+        const response = await axios.get("https://keith.api.stdlib.com/pokefusion@0.2.0/");
+        correct = false;
+        currentFusion = response.data;
+        console.log(currentFusion);
+        display(currentFusion);
+    } catch (error) {
+        console.error('Error fetching Pokemon fusion:', error);
+        throw error;
+    }
 }
+
 let points = 0;
 const fusionName = document.querySelector('.name');
 const img = document.querySelector('.image');
@@ -18,9 +26,9 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     const headInput = document.getElementById('head').value;
     const bodyInput = document.getElementById('body').value;
-    // console.log(headInput + bodyInput + result.data.fused.head + result.data.fused.body);
-    // if(headInput.toLowerCase() == result.data.fused.head.toLowerCase() && bodyInput.toLowerCase() == result.data.fused.body.toLowerCase()){
-    if(headInput === "" && !correct){
+
+    if(bodyInput.toLowerCase() === currentFusion.fused.body.toLowerCase() && headInput.toLowerCase() === currentFusion.fused.head.toLowerCase() && !correct){
+        form.reset();
         correct = true;
         head.classList.add('show');
         body.classList.add('show');
@@ -30,18 +38,17 @@ form.addEventListener('submit', (event) => {
 })
 
 function display(result) {
-    console.log(result);
-    fusionName.textContent = `NAME: ${result.data.name}`;
-    img.src = result.data.image_url;
-    head.textContent = `HEAD: ${result.data.fused.head}`;
-    body.textContent = `BODY: ${result.data.fused.body}`;
-    return result;
+    fusionName.textContent = `NAME: ${result.name}`;
+    img.src = result.image_url;
+    head.textContent = `HEAD: ${result.fused.head}`;
+    body.textContent = `BODY: ${result.fused.body}`;
 }
 
 next.addEventListener('click', () => {
+    form.reset();
     fetch()
     head.classList.remove('show');
-        body.classList.remove('show');
+    body.classList.remove('show');
 })
 
 fetch();
