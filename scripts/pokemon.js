@@ -1,11 +1,12 @@
 let correct;
+let pokemonData;
 async function getRandomPokemon() {
     try {
         const randomId = Math.floor(Math.random() * 493) + 1;
 
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${randomId}`);
 
-        const pokemonData = response.data;
+        pokemonData = response.data;
         console.log(pokemonData);
         correct = false;
 
@@ -26,7 +27,7 @@ let points = 0;
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const nameInput = document.getElementById('name').value;
-    if(nameInput !== "" && !correct){
+    if(nameInput.toLowerCase() === pokemonData.name.toLowerCase() && !correct){
         form.reset();
         correct = true;
         points++;
