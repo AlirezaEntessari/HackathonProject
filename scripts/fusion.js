@@ -21,20 +21,40 @@ const body = document.querySelector('.body');
 const form = document.querySelector('.form');
 const pointsElement = document.querySelector('.points');
 const next = document.querySelector('.next');
+const headInput = document.getElementById('head');
+const bodyInput = document.getElementById('body');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    const headInput = document.getElementById('head').value;
-    const bodyInput = document.getElementById('body').value;
 
-    if(bodyInput.toLowerCase() === currentFusion.fused.body.toLowerCase() && headInput.toLowerCase() === currentFusion.fused.head.toLowerCase() && !correct){
-        form.reset();
+    if(bodyInput.value.toLowerCase() === currentFusion.fused.body.toLowerCase() && headInput.value.toLowerCase() === currentFusion.fused.head.toLowerCase() && !correct){
         correct = true;
-        head.classList.add('show');
-        body.classList.add('show');
+        headInput.classList.remove("correct", 'incorrect');
+        bodyInput.classList.remove("correct", 'incorrect');
+        headInput.classList.add("correct");
+        bodyInput.classList.add("correct");
+        // head.classList.add('show');
+        // body.classList.add('show');
+        fusionName.classList.add('show');
         points++;
         pointsElement.textContent = `POINTS: ${points}`;
         next.textContent = "NEXT";
+    }
+    else if(bodyInput.value.toLowerCase() === currentFusion.fused.body.toLowerCase()) {
+        bodyInput.classList.remove("correct", 'incorrect');
+        bodyInput.classList.add("correct");
+    }
+    else if(headInput.value.toLowerCase() === currentFusion.fused.head.toLowerCase()) {
+        headInput.classList.remove("correct", 'incorrect');
+        headInput.classList.add("correct");
+    }
+    if(bodyInput.value.toLowerCase() !== currentFusion.fused.body.toLowerCase() || headInput.value.toLowerCase() !== currentFusion.fused.head.toLowerCase()){
+        if(bodyInput.value.toLowerCase() !== currentFusion.fused.body.toLowerCase()) {
+            bodyInput.classList.add("incorrect");
+        }
+        if(headInput.value.toLowerCase() !== currentFusion.fused.head.toLowerCase()) {
+            headInput.classList.add("incorrect");
+        }
     }
 })
 
@@ -49,8 +69,11 @@ next.addEventListener('click', () => {
     form.reset();
     next.textContent = "SKIP";
     fetch()
-    head.classList.remove('show');
-    body.classList.remove('show');
+    fusionName.classList.remove('show');
+    headInput.classList.remove("correct", 'incorrect');
+    bodyInput.classList.remove("correct", 'incorrect');
+    // head.classList.remove('show');
+    // body.classList.remove('show');
 })
 
 fetch();
