@@ -18,19 +18,22 @@ async function getRandomPokemon() {
 const name = document.querySelector('.name');
 const id = document.querySelector('.id');
 const img = document.querySelector('.image');
-const form = document.querySelector('form');
+const form = document.getElementById('form');
 const pointsElement = document.querySelector('.points');
+const next = document.querySelector('.next');
 let points = 0;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     const nameInput = document.getElementById('name').value;
-    if(nameInput === "" && !correct){
+    if(nameInput !== "" && !correct){
+        form.reset();
         correct = true;
         points++;
         pointsElement.textContent = `POINTS: ${points}`;
         img.classList.add('image--show');
         img.classList.remove('image');
+        next.textContent = "NEXT";
     }
 })
 
@@ -48,8 +51,10 @@ function displayPokemonData(data) {
     types.textContent = `Types: ${data.types.map(type => type.type.name).join(', ')}`;
 }
 
-const next = document.querySelector('.next');
+
 next.addEventListener('click', () => {
+    next.textContent = "SKIP";
+    form.reset();
     getRandomPokemon()
     img.classList.add('image');
     img.classList.remove('image--show');
