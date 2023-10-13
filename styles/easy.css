@@ -8,4 +8,13 @@
 .image--show {
   filter: brightness(1);
   transition: 1s;
-}/*# sourceMappingURL=pokemon.css.map */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.correct {
+  background-color: green;
+}/*# sourceMappingURL=easy.css.map */

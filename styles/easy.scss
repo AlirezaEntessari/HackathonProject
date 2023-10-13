@@ -13,3 +13,12 @@
         transition: 1s;
     }
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.correct {
+    background-color: green;
+}

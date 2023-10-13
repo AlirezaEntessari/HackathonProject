@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/pokemon.css">
+    <link rel="stylesheet" href="../styles/easy.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../scripts/pokemon.js" async></script>
+    <script src="../scripts/easy.js" async></script>
     <title>Pokemon</title>
 </head>
 <body>
     <a href="/">Home</a>
-    <a href="./easy.html">EASY MODE</a>
     <h1 class="points">POINTS: 0</h1>
     <h1 class="name"></h1>
     <h3 class="id"></h3>
     <img class="image" src="" alt="">
     <h2 class="types"></h2>
     <form class="form" id="form">
-        <div>
-            <label for="name">NAME: </label>
-            <input type="text" id="name" name="name">
-        </div>
-        <button class="form__submit-button" type="submit">SUBMIT</button>
+        <button class="form__option" type="submit" id="option1">a</button>
+        <button class="form__option" type="submit" id="option2">b</button>
+        <button class="form__option" type="submit" id="option3">c</button>
+        <button class="form__option" type="submit" id="option4">d</button>
     </form>
     <button class="next">SKIP</button>
 </body>
