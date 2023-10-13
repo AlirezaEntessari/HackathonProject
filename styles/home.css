@@ -1,3 +1,52 @@
+body {
+  background-color: #ffeeaa;
+}
+
+.pokemon__header {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 3rem;
+  color: #1d2597;
+}
+.pokemon__points {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  padding-left: 52rem;
+}
+
+#head__label {
+  padding-left: 52rem;
+}
+
+#body__label {
+  padding-left: 52rem;
+}
+
+#head {
+  margin-right: 52rem;
+}
+
+#body {
+  margin-right: 52rem;
+}
+
+.form__submit-button {
+  margin-left: 58rem;
+}
+
+.next {
+  margin-left: 58rem;
+}
+
 .head {
   display: none;
 }

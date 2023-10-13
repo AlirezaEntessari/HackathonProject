@@ -9,24 +9,30 @@
     <title>Hackathon</title>
 </head>
 <body>
-    <a href="./pages/pokemon.html">Who's That Pokemon</a>
-    <h1 class="points">POINTS: 0</h1>
-    <h1 class="name"></h1>
-    <img class="image" src="" alt="">
-    <form class="form">
-        <div>
-            <label for="head">HEAD</label>
-            <input type="text" id="head" name="head">
-        </div>
-        <div>
-            <label for="body">BODY</label>
-            <input type="text" id="body" name="body">
-        </div>
-        <button class="form__submit-button" type="submit">SUBMIT</button>
-    </form>
-    <h2 class="head"></h2>
-    <h2 class="body"></h2>
-    <button class="next">NEXT</button>
+    <header class="pokemon">
+        <a class="pokemon__header" href="./pages/pokemon.html">Who's That Pokemon</a>
+        <h1 class="pokemon__points">POINTS: 0</h1>
+        <h1 class="name"></h1>
+    </header>
+    
+    <main>
+        <img class="image" src="" alt="">
+        <form class="form">
+            <div>
+                <label id="head__label" for="head">HEAD</label>
+                <input type="text" id="head" name="head">
+            </div>
+            <div>
+                <label id="body__label" for="body">BODY</label>
+                <input type="text" id="body" name="body">
+            </div>
+            <button class="form__submit-button" type="submit">SUBMIT</button>
+        </form>
+        <h2 class="head"></h2>
+        <h2 class="body"></h2>
+        <button class="next">NEXT</button>
+    </main>
+    
     
 </body>
 </html>
