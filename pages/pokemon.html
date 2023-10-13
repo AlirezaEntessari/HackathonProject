@@ -3,29 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/home.css">
+    <link rel="stylesheet" href="../styles/pokemon.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./scripts/app.js" async></script>
-    <title>Hackathon</title>
+    <script src="../scripts/pokemon.js" async></script>
+    <title>Pokemon</title>
 </head>
 <body>
+    <a href="/">Home</a>
     <h1 class="points">POINTS: 0</h1>
     <h1 class="name"></h1>
+    <h3 class="id"></h3>
     <img class="image" src="" alt="">
+    <h2 class="types"></h2>
     <form class="form">
         <div>
-            <label for="head">HEAD</label>
-            <input type="text" id="head" name="head">
-        </div>
-        <div>
-            <label for="body">BODY</label>
-            <input type="text" id="body" name="body">
+            <label for="name">NAME: </label>
+            <input type="text" id="name" name="name">
         </div>
         <button class="form__submit-button" type="submit">SUBMIT</button>
     </form>
-    <h2 class="head"></h2>
-    <h2 class="body"></h2>
     <button class="next">NEXT</button>
-    <a href="./pages/pokemon.html">Pokemon</a>
 </body>
 </html>

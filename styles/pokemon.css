@@ -1,0 +1,7 @@
+.image {
+  filter: brightness(0);
+}
+.image--show {
+  filter: brightness(1);
+  transition: 1s;
+}/*# sourceMappingURL=pokemon.css.map */
