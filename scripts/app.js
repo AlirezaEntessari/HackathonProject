@@ -34,6 +34,7 @@ form.addEventListener('submit', (event) => {
         body.classList.add('show');
         points++;
         pointsElement.textContent = `POINTS: ${points}`;
+        next.textContent = "NEXT";
     }
 })
 
@@ -46,6 +47,7 @@ function display(result) {
 
 next.addEventListener('click', () => {
     form.reset();
+    next.textContent = "SKIP";
     fetch()
     head.classList.remove('show');
     body.classList.remove('show');
