@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #CC0000;
+    text-align: center;
+
+    &__item {
+        padding: 1rem;
+        // margin: 1rem;
+        width: 33%;
+
+        &-link {
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 1rem;
+
+            
+        }
+
+        &--highlighted {
+            border-bottom: white 2px solid;
+        }
+    }
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(50,50,50,0.5), rgba(50, 50, 50, 0.5)), url(../img/pokemon-party.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #3B4CCA;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

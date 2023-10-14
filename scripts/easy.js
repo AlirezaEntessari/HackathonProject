@@ -25,8 +25,8 @@ async function getRandomNames() {
     return [response1.data.name, response2.data.name, response3.data.name];
 }
 
-const id = document.querySelector('.id');
-const img = document.querySelector('.image');
+const id = document.querySelector('.pokemon__id');
+const img = document.querySelector('.pokemon__image');
 const form = document.getElementById('form');
 const pointsElement = document.querySelector('.points');
 const next = document.querySelector('.next');
@@ -61,8 +61,8 @@ form.addEventListener('submit', (event) => {
         points++;
         selected.classList.add('correct');
         pointsElement.textContent = `POINTS: ${points}`;
-        img.classList.add('image--show');
-        img.classList.remove('image');
+        img.classList.add('pokemon__image--show');
+        img.classList.remove('pokemon__image');
         next.textContent = "NEXT";
         option1.disabled = true;
         option2.disabled = true;
@@ -82,7 +82,7 @@ function displayPokemonData(data) {
     img.setAttribute("alt", data.name)
     
 
-    const types = document.querySelector('.types');
+    const types = document.querySelector('.pokemon__types');
     types.textContent = `Types: ${data.types.map(type => type.type.name).join(', ')}`;
 }
 
@@ -91,8 +91,8 @@ next.addEventListener('click', () => {
     next.textContent = "SKIP";
     form.reset();
     getRandomPokemon()
-    img.classList.add('image');
-    img.classList.remove('image--show');
+    img.classList.add('pokemon__image');
+    img.classList.remove('pokemon__image--show');
     option1.classList.remove('correct', 'incorrect');
     option2.classList.remove('correct', 'incorrect');
     option3.classList.remove('correct', 'incorrect');

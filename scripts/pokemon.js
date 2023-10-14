@@ -16,8 +16,8 @@ async function getRandomPokemon() {
     }
 }
 
-const id = document.querySelector('.id');
-const img = document.querySelector('.image');
+const id = document.querySelector('.pokemon__id');
+const img = document.querySelector('.pokemon__image');
 const form = document.getElementById('form');
 const pointsElement = document.querySelector('.points');
 const next = document.querySelector('.next');
@@ -31,8 +31,8 @@ form.addEventListener('submit', (event) => {
         correct = true;
         points++;
         pointsElement.textContent = `POINTS: ${points}`;
-        img.classList.add('image--show');
-        img.classList.remove('image');
+        img.classList.add('pokemon__image--show');
+        img.classList.remove('pokemon__image');
         next.textContent = "NEXT";
     }
 })
@@ -45,7 +45,7 @@ function displayPokemonData(data) {
     img.setAttribute("alt", data.name)
     
 
-    const types = document.querySelector('.types');
+    const types = document.querySelector('.pokemon__types');
     types.textContent = `Types: ${data.types.map(type => type.type.name).join(', ')}`;
 }
 
@@ -54,8 +54,8 @@ next.addEventListener('click', () => {
     next.textContent = "SKIP";
     form.reset();
     getRandomPokemon()
-    img.classList.add('image');
-    img.classList.remove('image--show');
+    img.classList.add('pokemon__image');
+    img.classList.remove('pokemon__image--show');
 })
 
 getRandomPokemon();

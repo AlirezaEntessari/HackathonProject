@@ -1,11 +1,122 @@
-.image {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #CC0000;
+  text-align: center;
+}
+.nav__item {
+  padding: 1rem;
+  width: 33%;
+}
+.nav__item-link {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem;
+}
+.nav__item--highlighted {
+  border-bottom: white 2px solid;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../img/pokemon-party.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #3B4CCA;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon {
+  background-color: white;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pokemon__image {
   filter: brightness(0);
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.image--show {
+.pokemon__image--show {
   filter: brightness(1);
   transition: 1s;
+}
+
+.points {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: white;
+  background-color: #CC0000;
+  border-radius: 1rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.form__option {
+  background-color: white;
+  outline: none;
+  border: grey 1px solid;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.form__option:hover {
+  cursor: pointer;
+  background-color: rgb(235, 235, 235);
+}
+.form__submit-button {
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+.next {
+  width: 200px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.correct {
+  background-color: green;
+}
+
+.incorrect {
+  background-color: red;
 }/*# sourceMappingURL=pokemon.css.map */

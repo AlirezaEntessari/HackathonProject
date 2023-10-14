@@ -6,29 +6,36 @@
     <link rel="stylesheet" href="../styles/pokemon.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/pokemon.js" async></script>
-    <title>Pokemon</title>
+    <title>Pokemon Trivia - HARD</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/">EASY MODE</a></li>
-                <li><a href="./pokemon.html">HARD MODE</a></li>
-                <li><a href="./fusion.html">FUSION MODE</a></li>
+            <ul class="nav">
+                <li class="nav__item"><a class="nav__item-link" href="/">EASY MODE</a></li>
+                <li class="nav__item nav__item--highlighted"><a class="nav__item-link" href="./pokemon.html">HARD MODE</a></li>
+                <li class="nav__item"><a class="nav__item-link" href="./fusion.html">FUSION MODE</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="points">POINTS: 0</h1>
-    <h3 class="id"></h3>
-    <img class="image" src="" alt="">
-    <h2 class="types"></h2>
-    <form class="form" id="form">
-        <div>
-            <label for="name">NAME: </label>
-            <input type="text" id="name" name="name">
+    <main>
+        <h1 class="points">POINTS: 0</h1>
+        <div class="pokemon">
+            <h3 class="pokemon__id"></h3>
+            <img class="pokemon__image" src="" alt="">
+            <h2 class="pokemon__types"></h2>
         </div>
-        <button class="form__submit-button" type="submit">SUBMIT</button>
-    </form>
-    <button class="next">SKIP</button>
+        
+
+        <form class="form" id="form">
+            <div class="form-input">
+                <label for="name">NAME: </label>
+                <input type="text" id="name" name="name">
+            </div>
+            <button class="form__submit-button" type="submit">SUBMIT</button>
+        </form>
+        <button class="next">SKIP</button>
+    </main>
+    
 </body>
 </html>

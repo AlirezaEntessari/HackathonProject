@@ -6,35 +6,41 @@
     <link rel="stylesheet" href="../styles/fusion.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/fusion.js" async></script>
-    <title>Hackathon</title>
+    <title>Pokemon Trivia - FUSION</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/">EASY MODE</a></li>
-                <li><a href="./pokemon.html">HARD MODE</a></li>
-                <li><a href="./fusion.html">FUSION MODE</a></li>
+            <ul class="nav">
+                <li class="nav__item"><a class="nav__item-link" href="/">EASY MODE</a></li>
+                <li class="nav__item"><a class="nav__item-link" href="./pokemon.html">HARD MODE</a></li>
+                <li class="nav__item nav__item--highlighted"><a class="nav__item-link" href="./fusion.html">FUSION MODE</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="points">POINTS: 0</h1>
-    <h1 class="name"></h1>
-    <img class="image" src="" alt="">
-    <form class="form">
-        <div>
-            <label for="head">HEAD</label>
-            <input type="text" id="head" name="head">
+    <main>
+        <h1 class="points">POINTS: 0</h1>
+        <div class="pokemon">
+            <h1 class="name"></h1>
+            <img class="image" src="" alt="">
         </div>
-        <div>
-            <label for="body">BODY</label>
-            <input type="text" id="body" name="body">
-        </div>
-        <button class="form__submit-button" type="submit">SUBMIT</button>
-    </form>
-    <h2 class="head"></h2>
-    <h2 class="body"></h2>
-    <button class="next">SKIP</button>
+        
+        <form class="form">
+            <div>
+                <label for="head">HEAD</label>
+                <input type="text" id="head" name="head">
+            </div>
+            <div>
+                <label for="body">BODY</label>
+                <input type="text" id="body" name="body">
+            </div>
+            <button class="form__submit-button" type="submit">SUBMIT</button>
+        </form>
+        <h2 class="head"></h2>
+        <h2 class="body"></h2>
+        <button class="next">SKIP</button>
+    </main>
+    
     
 </body>
 </html>

@@ -6,28 +6,34 @@
     <link rel="stylesheet" href="../styles/easy.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../scripts/easy.js" async></script>
-    <title>Whos That Pokemon - EASY</title>
+    <title>Pokemon Trivia - EASY</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="/">EASY MODE</a></li>
-                <li><a href="./pages/pokemon.html">HARD MODE</a></li>
-                <li><a href="./pages/fusion.html">FUSION MODE</a></li>
+            <ul class="nav">
+                <li class="nav__item nav__item--highlighted"><a class="nav__item-link" href="/">EASY MODE</a></li>
+                <li class="nav__item"><a class="nav__item-link" href="./pages/pokemon.html">HARD MODE</a></li>
+                <li class="nav__item"><a class="nav__item-link" href="./pages/fusion.html">FUSION MODE</a></li>
             </ul>
         </nav>
     </header>
-    <h1 class="points">POINTS: 0</h1>
-    <h3 class="id"></h3>
-    <img class="image" src="" alt="">
-    <h2 class="types"></h2>
-    <form class="form" id="form">
-        <button class="form__option" type="submit" id="option1">a</button>
-        <button class="form__option" type="submit" id="option2">b</button>
-        <button class="form__option" type="submit" id="option3">c</button>
-        <button class="form__option" type="submit" id="option4">d</button>
-    </form>
-    <button class="next">SKIP</button>
+    <main>
+        <h1 class="points">POINTS: 0</h1>
+        <div class="pokemon">
+            
+            <h3 class="pokemon__id"></h3>
+            <img class="pokemon__image" src="" alt="">
+            <h2 class="pokemon__types"></h2>
+        </div>
+        <form class="form" id="form">
+            <button class="form__option" type="submit" id="option1">a</button>
+            <button class="form__option" type="submit" id="option2">b</button>
+            <button class="form__option" type="submit" id="option3">c</button>
+            <button class="form__option" type="submit" id="option4">d</button>
+        </form>
+        <button class="next">SKIP</button>
+    </main>
+    
 </body>
 </html>
